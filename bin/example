@@ -1,0 +1,10 @@
+var pkg = require('../package.json')
+var program = require('commander')
+var surge = require('surge')
+
+program
+  .version(pkg.version)
+
+program
+  .help()
+  .parse(process.argv)

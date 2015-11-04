@@ -1,0 +1,21 @@
+{
+  "name": "@surge/example-commander",
+  "version": "0.1.0",
+  "description": "How to expose the Surge CLI within your own command line tool, built with Commander.",
+  "homepage": "https://surge.sh",
+  "repository": "https://github.com/surge-sh/example-commander.git",
+  "license": "MIT",
+  "author": "Kenneth Ormandy <kenneth@surge.sh> (http://kennethormandy.com)",
+  "contributors": [
+    "Kenneth Ormandy <kenneth@surge.sh> (http://kennethormandy.com)",
+    "Brock Whitten   <brock@surge.sh>   (http://sintaxi.com)"
+  ],
+  "keywords": ["surge", "surge.sh", "example", "commander", "cli", "deploy"],
+  "dependencies": {
+    "commander": "2.9.0",
+    "surge": "0.17.1"
+  },
+  "scripts": {
+    "start": "node ./bin/example"
+  }
+}
