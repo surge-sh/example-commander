@@ -19,6 +19,9 @@
     "cli",
     "deploy"
   ],
+  "bin": {
+    "example": "./bin/example.js"
+  },
   "dependencies": {
     "chalk": "1.1.1",
     "commander": "2.9.0",
