@@ -51,13 +51,13 @@ hooks.preAuth = function (req, next) {
 }
 
 
-// Here, we can add a `preProject` hook to run before
+// Here, we can add a `postProject` hook to run before
 // after the project directory has been determined, but
 // before it has been publish. This is incredibly useful if
 // you are making any kind of build tool or static site generator:
 // your library can compile any files here before moving onto the
 // next step.
-hooks.preProject = function (req, next) {
+hooks.postProject = function (req, next) {
   example('The project is at ' + req.project + ' Your CLI could do something with it here.')
   next()
 }
@@ -106,5 +106,9 @@ program
   .description('Log out of your account.')
   .action(surge.logout(hooks))
 
-program
-  .parse(process.argv)
+
+program.parse(process.argv)
+
+if (program.args.length < 1) {
+  program.help()
+}
